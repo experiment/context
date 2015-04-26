@@ -1,9 +1,29 @@
 {{#if model}}
   <div class='user'>
-    <p>{{model.email}}</p>
+    {{model.email}}
     <span class='id'>{{model.id}}</span>
 
-    <h1>{{model.name}}</h1>
+    <div class='name'>{{model.name}}</div>
+
+    <ul class='projects'>
+      {{#each project in model.projects}}
+        <li>
+          <span {{bind-attr class=':state project.workflowStateShort'}}>
+            {{project.workflowState}}
+          </span>
+          <span class='title'>
+            <a {{bind-attr href=project.url}} target=_blank>
+              {{#if project.title}}
+                {{project.title}}
+              {{else}}
+                Untitled
+              {{/if}}
+            </a>
+          </span>
+          <span class='id'>{{project.id}}</span>
+        </li>
+      {{/each}}
+    </ul>
   </div>
 {{else}}
   <p>Is not a known user</p>

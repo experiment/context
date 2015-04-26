@@ -1,0 +1,60 @@
+$textColor: #212121;
+
+body {
+  font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial;
+  color: $textColor;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+}
+
+.state {
+  &.pr { background-color: #ecdfe9; }
+  &.s { background-color: #eee; }
+  &.r { background-color: #eee; }
+  &.a { background-color: #eee; }
+  &.no { background-color: #d2a8a8; }
+  &.i { background-color: #eee; }
+  &.pre { background-color: #c5e9f5; }
+  &.l { background-color: #aae5fe; }
+  &.f { background-color: #e2f0d7; }
+  &.pd { background-color: #e2f0d7; }
+  &.fa { background-color: #d2a8a8; }
+  &.c { background-color: #000; }
+}
+
+.user {
+  .id {
+    float: right;
+  }
+  .name {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+}
+
+ul.projects {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-weight: 300;
+
+  li {
+    height: 25px;
+    margin: 5px;
+  }
+  .state {
+    padding: 3px 2px 3px 6px;
+    margin-right: 5px;
+  }
+  .title {
+    font-weight: 400;
+  }
+  .id {
+    float: right;
+  }
+}
