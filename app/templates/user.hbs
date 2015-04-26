@@ -19,7 +19,8 @@
           <span {{bind-attr class=':state project.workflowStateShort'}}>
             {{project.workflowState}}
           </span>
-          <span class='title'>
+          <span class='id'>{{project.id}}</span>
+          <div class='title'>
             <a {{bind-attr href=project.url}} target=_blank>
               {{#if project.title}}
                 {{project.title}}
@@ -27,8 +28,7 @@
                 Untitled
               {{/if}}
             </a>
-          </span>
-          <span class='id'>{{project.id}}</span>
+          </div>
         </li>
       {{/each}}
     </ul>

@@ -3,6 +3,8 @@ $textColor: #212121;
 body {
   font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial;
   color: $textColor;
+  width: 290px;
+  margin: 5px;
 }
 
 a {
@@ -23,6 +25,10 @@ a {
   &.pd { background-color: #e2f0d7; }
   &.fa { background-color: #d2a8a8; }
   &.c { background-color: #000; }
+}
+
+.id {
+  font-weight: 300;
 }
 
 .user {
@@ -47,14 +53,13 @@ ul.projects {
   font-weight: 300;
 
   li {
-    height: 25px;
-    margin: 5px;
+    padding-bottom: 20px;
   }
   .state {
-    padding: 3px 2px 3px 6px;
-    margin-right: 5px;
+    padding: 3px 6px;
   }
   .title {
+    margin-top: 5px;
     font-weight: 400;
   }
   .id {
