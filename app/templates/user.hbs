@@ -5,6 +5,14 @@
 
     <div class='name'>{{model.name}}</div>
 
+    <div class='count'>
+      Backed {{model.backedProjectCount}} projects
+    </div>
+
+    <div class='count'>
+      Created {{model.projects.length}} projects:
+    </div>
+
     <ul class='projects'>
       {{#each project in model.projects}}
         <li>
