@@ -29,8 +29,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
+    ENV.apiHost = 'http://lvh.me:3000';
+
     ENV.contentSecurityPolicy = {
-      'script-src': "'self' 'unsafe-eval' https://dl.frontapp.com *.ngrok.com *.ngrok.com:35729" // Add ngrok for testing
+      // Add lvh.me:3000, and ngrok for testing
+      'script-src': "'self' 'unsafe-eval' https://dl.frontapp.com *.ngrok.com *.ngrok.com:35729",
+      'connect-src': "'self' *.lvh.me:3000 *.ngrok.com"
     }
   }
 
@@ -47,7 +51,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = 'https://experiment.com';
   }
 
   return ENV;

@@ -1,0 +1,10 @@
+{{#if model}}
+  <div class='user'>
+    <p>{{model.email}}</p>
+    <span class='id'>{{model.id}}</span>
+
+    <h1>{{model.name}}</h1>
+  </div>
+{{else}}
+  <p>Is not a known user</p>
+{{/if}}
