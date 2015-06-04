@@ -13,6 +13,11 @@ export default DS.Model.extend({
     return 100 * this.get('fundingRaised') / this.get('fundingTarget');
   }.property('fundingRaised', 'fundingTarget'),
 
+  percentDuration: function () {
+    var now = moment.utc();
+    return 100 * (this.get('fundingEnd') - moment.utc()) / (this.get('fundingEnd') - this.get('fundingStart'));
+  }.property('fundingStart', 'fundingEnd'),
+
   workflowStateShort: function() {
     switch (this.get('workflowState')) {
       case 'private':

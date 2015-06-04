@@ -1,8 +1,8 @@
 <li>
+  {{progress-bubble workflowStateShort=project.workflowStateShort percentFunded=project.percentFunded percentDuration=project.percentDuration}}
   <span {{bind-attr class=':state project.workflowStateShort'}}>
     {{project.workflowState}}
   </span>
-  {{project.percentFunded}}% funded
   <span class='id'>{{project.id}}</span>
   <div class='title'>
     <a {{bind-attr href=project.url}} target=_blank>
