@@ -15,22 +15,7 @@
 
     <ul class='projects'>
       {{#each project in model.projects}}
-        <li>
-          <span {{bind-attr class=':state project.workflowStateShort'}}>
-            {{project.workflowState}}
-          </span>
-          {{project.percentFunded}}% funded
-          <span class='id'>{{project.id}}</span>
-          <div class='title'>
-            <a {{bind-attr href=project.url}} target=_blank>
-              {{#if project.title}}
-                {{project.title}}
-              {{else}}
-                Untitled
-              {{/if}}
-            </a>
-          </div>
-        </li>
+        {{partial "projects/row"}}
       {{/each}}
     </ul>
   </div>
