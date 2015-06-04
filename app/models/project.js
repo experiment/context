@@ -4,6 +4,8 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   workflowState: DS.attr('string'),
   url: DS.attr('string'),
+  fundingStart: DS.attr('utc'),
+  fundingEnd: DS.attr('utc'),
 
   workflowStateShort: function() {
     switch (this.get('workflowState')) {
