@@ -46,5 +46,9 @@ export default DS.Model.extend({
       case 'cancelled':
         return 'c';
     }
-  }.property('workflowState')
+  }.property('workflowState'),
+
+  tooltip: function() {
+    return this.get('percentFunded') + "% of $" + this.get('fundingTarget');
+  }.property('percentFunded'),
 });
