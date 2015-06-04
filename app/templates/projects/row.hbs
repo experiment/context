@@ -1,5 +1,7 @@
 <li>
-  {{progress-bubble workflowStateShort=project.workflowStateShort percentFunded=project.percentFunded percentDuration=project.percentDuration}}
+  <div class='progress-bubble hint--right hint--no-animate' data-hint="{{project.percentFunded}}% funded">
+    {{progress-bubble workflowStateShort=project.workflowStateShort percentFunded=project.percentFunded percentDuration=project.percentDuration}}
+  </div>
   <span {{bind-attr class=':state project.workflowStateShort'}}>
     {{project.workflowState}}
   </span>
