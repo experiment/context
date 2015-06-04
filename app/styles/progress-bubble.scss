@@ -1,0 +1,28 @@
+.progress-bubble {
+  $size: 40px;
+
+  height: $size;
+  width: $size;
+
+  circle {
+    &.pr { fill: #ecdfe9; }
+    &.s { fill: #eee; }
+    &.r { fill: #eee; }
+    &.a { fill: #eee; }
+    &.no { fill: #d2a8a8; }
+    &.i { fill: #eee; }
+    &.pre { fill: #c5e9f5; }
+    &.l { fill: #aae5fe; }
+    &.f { fill: #e2f0d7; }
+    &.pd { fill: #e2f0d7; }
+    &.fa { fill: #d2a8a8; }
+    &.c { fill: #000; }
+  }
+  path.funding {
+    fill: #1B5E20;
+  }
+  path.duration {
+    fill: #000;
+    opacity: 0.1;
+  }
+}

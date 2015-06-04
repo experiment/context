@@ -56,6 +56,10 @@ ul.projects {
   li {
     padding-bottom: 20px;
   }
+  .progress-bubble {
+    float: left;
+    margin-right: 10px;
+  }
   .state {
     padding: 3px 6px;
   }
@@ -67,3 +71,5 @@ ul.projects {
     float: right;
   }
 }
+
+@import 'progress-bubble';
