@@ -6,6 +6,12 @@ export default DS.Model.extend({
   url: DS.attr('string'),
   fundingStart: DS.attr('utc'),
   fundingEnd: DS.attr('utc'),
+  fundingRaised: DS.attr('number'),
+  fundingTarget: DS.attr('number'),
+
+  percentFunded: function() {
+    return 100 * this.get('fundingRaised') / this.get('fundingTarget');
+  }.property('fundingRaised', 'fundingTarget'),
 
   workflowStateShort: function() {
     switch (this.get('workflowState')) {
