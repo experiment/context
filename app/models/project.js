@@ -8,6 +8,7 @@ export default DS.Model.extend({
   fundingEnd: DS.attr('utc'),
   fundingRaised: DS.attr('number'),
   fundingTarget: DS.attr('number'),
+  location: DS.attr('string'),
 
   percentFunded: function() {
     return 100 * this.get('fundingRaised') / this.get('fundingTarget');
