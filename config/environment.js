@@ -29,12 +29,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
-    ENV.apiHost = 'http://lvh.me:3000';
+    ENV.apiHost = 'http://localhost:3000';
 
     ENV.contentSecurityPolicy = {
-      // Add lvh.me:3000, and ngrok for testing
+      // Add localhost:3000, and ngrok for testing
       'script-src': "'self' 'unsafe-eval' https://dl.frontapp.com *.ngrok.com *.ngrok.com:35729",
-      'connect-src': "'self' *.lvh.me:3000 *.ngrok.com"
+      'connect-src': "'self' *.localhost:3000 *.ngrok.com"
     }
   }
 
