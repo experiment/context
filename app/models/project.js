@@ -9,6 +9,7 @@ export default DS.Model.extend({
   fundingRaised: DS.attr('number'),
   fundingTarget: DS.attr('number'),
   location: DS.attr('string'),
+  lastReviewDocumentUrl: DS.attr('string'),
   lastReviewer: DS.attr('string'),
 
   percentFunded: function() {

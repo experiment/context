@@ -19,8 +19,15 @@
       {{project.workflowState}}
     </div>
     {{#if project.lastReviewer}}
-      <div class='last-reviewer'>
-        Last Reviewer: {{project.lastReviewer}}
+      <div>
+        Last Review: {{project.lastReviewer}}
+        {{#if project.lastReviewDocumentUrl}}
+          <span>
+            <a {{bind-attr href=project.lastReviewDocumentUrl}} target=_blank>
+              📄
+            </a>
+          </span>
+        {{/if}}
       </div>
     {{/if}}
     {{project.location}}
