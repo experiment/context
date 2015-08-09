@@ -25,18 +25,19 @@ a {
 }
 
 .state {
-  &.pr { background-color: #ecdfe9; }
-  &.s { background-color: #eee; }
-  &.r { background-color: #eee; }
-  &.a { background-color: #eee; }
-  &.no { background-color: #d2a8a8; }
+  &.pr { background-color: #C3EFFF; }
+  &.s { background-color: #FFC95C; }
+  &.r { background-color: #F8B6E9; }
+  &.a { background-color: #35B1FF; }
+  &.no { background-color: #eee; }
   &.i { background-color: #eee; }
-  &.pre { background-color: #c5e9f5; }
-  &.l { background-color: #aae5fe; }
-  &.f { background-color: #e2f0d7; }
-  &.pd { background-color: #e2f0d7; }
-  &.fa { background-color: #d2a8a8; }
-  &.c { background-color: #000; color: #fff; }
+  &.pre { background-color: #46FFF5; }
+  &.l { background-color: #2ECAB5; }
+  &.ss { background-color: #A2FFAD; }
+  &.f { background-color: #FAFF88; }
+  &.pd { background-color: #28E986; }
+  &.fa { background-color: #eee; }
+  &.c { background-color: #949494; }
 }
 
 .id {

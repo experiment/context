@@ -39,6 +39,7 @@ export default DS.Model.extend({
       case 'launched':
         return 'l';
       case 'successful':
+        return 'ss';
       case 'finished':
         return 'f';
       case 'paid':

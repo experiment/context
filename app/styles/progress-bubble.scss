@@ -5,24 +5,25 @@
   width: $size;
 
   circle {
-    &.pr { fill: #ecdfe9; }
-    &.s { fill: #eee; }
-    &.r { fill: #eee; }
-    &.a { fill: #eee; }
-    &.no { fill: #d2a8a8; }
+    &.pr { fill: #C3EFFF; }
+    &.s { fill: #FFC95C; }
+    &.r { fill: #F8B6E9; }
+    &.a { fill: #35B1FF; }
+    &.no { fill: #eee; }
     &.i { fill: #eee; }
-    &.pre { fill: #c5e9f5; }
-    &.l { fill: #aae5fe; }
-    &.f { fill: #e2f0d7; }
-    &.pd { fill: #e2f0d7; }
-    &.fa { fill: #d2a8a8; }
-    &.c { fill: #000; }
+    &.pre { fill: #46FFF5; }
+    &.l { fill: #2ECAB5; }
+    &.ss { fill: #A2FFAD; }
+    &.f { fill: #FAFF88; }
+    &.pd { fill: #28E986; }
+    &.fa { fill: #eee; }
+    &.c { fill: #949494; }
   }
   path.funding {
-    fill: #1B5E20;
+    fill: #00860F;
   }
   path.duration {
-    fill: #000;
-    opacity: 0.1;
+    fill: #fff;
+    opacity: 0.7;
   }
 }
