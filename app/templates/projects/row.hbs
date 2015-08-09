@@ -2,19 +2,27 @@
   <div class='progress-bubble hint--right hint--no-animate' data-hint="{{project.tooltip}}">
     {{progress-bubble workflowStateShort=project.workflowStateShort percentFunded=project.percentFunded percentDuration=project.percentDuration}}
   </div>
-  <div class='title'>
-    <a {{bind-attr href=project.url}} target=_blank>
-      {{#if project.title}}
-        {{project.title}}
-      {{else}}
-        Untitled
-      {{/if}}
-    </a>
+  <div class="project-info">
+    <div class='id'>
+      {{project.id}}
+    </div>
+    <div class='title'>
+      <a {{bind-attr href=project.url}} target=_blank>
+        {{#if project.title}}
+          {{project.title}}
+        {{else}}
+          Untitled
+        {{/if}}
+      </a>
+    </div>
+    <div {{bind-attr class=':state project.workflowStateShort'}}>
+      {{project.workflowState}}
+    </div>
+    {{#if project.lastReviewer}}
+      <div class='last-reviewer'>
+        Last Reviewer: {{project.lastReviewer}}
+      </div>
+    {{/if}}
+    {{project.location}}
   </div>
-
-  <span class='id'>{{project.id}}</span>
-  <span {{bind-attr class=':state project.workflowStateShort'}}>
-    {{project.workflowState}}
-  </span>
-  {{project.location}}
 </li>

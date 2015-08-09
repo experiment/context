@@ -1,5 +1,16 @@
 $textColor: #212121;
 
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 body {
   font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial;
   color: $textColor;
@@ -25,7 +36,7 @@ a {
   &.f { background-color: #e2f0d7; }
   &.pd { background-color: #e2f0d7; }
   &.fa { background-color: #d2a8a8; }
-  &.c { background-color: #000; }
+  &.c { background-color: #000; color: #fff; }
 }
 
 .id {
@@ -47,6 +58,10 @@ a {
   }
 }
 
+.last-reviewer {
+  display: block;
+}
+
 ul.projects {
   padding: 0;
   margin: 0;
@@ -54,17 +69,26 @@ ul.projects {
   font-weight: 300;
 
   li {
+    @include clearfix;
     padding-bottom: 20px;
   }
   .progress-bubble {
     float: left;
+    display: block;
     margin-right: 10px;
   }
+  .project-info {
+    overflow: hidden;
+    zoom: 1;
+    text-align: left;
+  }
   .state {
+    display: inline-block;
     padding: 3px 6px;
+    margin-bottom: 5px;
   }
   .title {
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: 400;
   }
   .id {
