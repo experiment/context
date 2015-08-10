@@ -9,6 +9,8 @@ export default DS.Model.extend({
   fundingRaised: DS.attr('number'),
   fundingTarget: DS.attr('number'),
   location: DS.attr('string'),
+  lastReviewDocumentUrl: DS.attr('string'),
+  lastReviewer: DS.attr('string'),
 
   percentFunded: function() {
     return 100 * this.get('fundingRaised') / this.get('fundingTarget');
@@ -38,6 +40,7 @@ export default DS.Model.extend({
       case 'launched':
         return 'l';
       case 'successful':
+        return 'ss';
       case 'finished':
         return 'f';
       case 'paid':
